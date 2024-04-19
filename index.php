@@ -27,7 +27,7 @@
     echo '</b>;'
     ?>
     <br>
-    <h3>Bài tập:</h3>
+    <h3>Bài tập1:</h3>
     <?php
      for ($i = 1; $i <= 200; $i++) {
         if ($i % 2 == 0) {
@@ -39,6 +39,17 @@
     }
 
     ?>
+        <h3>Bài tập2:</h3>
+        <h2>Đăng nhập hệ thống</h2>
+        <form action="kq.php" method="GET">
+            Tên đăng nhập : <input type="text" name="txtName"/>
+            <br>
+            Mật khẩu: <input type="password" name="txtPass"/>
+            <br>
+            <input type="submit" value="Đăng nhập"/>
+
+        </form>
+        
 
 </body>
 
