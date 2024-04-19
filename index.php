@@ -1,45 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+/*----------------------------------------------------------------------------------------
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See LICENSE in the project root for license information.
+ *---------------------------------------------------------------------------------------*/
 
-<body>
-    <h3>VD1:</h3>
-    <p>Văn bản HTML</p>
-    <?php
-    echo '<p>Văn bản PHP!</p>';
-    ?>
-    <p>Văn bản HTML khác,</p>
-    <h3>VD2:</h3>
-    <?php
-    echo '<P>Khối dữ liệu PHP 1.</p>';
-    ?>
-    <p>Dữ liệu HTML, <?php echo 'Dữ liệu PHP 2';?></p>
-    <?php
-    echo '<b>';
-    ?>
-    Một ví dụ kết hợp HTML và PHP.
-    <?php
-    echo '</b>;'
-    ?>
-    <br>
-    <h3>Bài tập:</h3>
-    <?php
-     for ($i = 1; $i <= 200; $i++) {
-        if ($i % 2 == 0) {
-            echo "<span style='color: red; font-weight: bold; font-size:20px;'>{$i}</span>";
-        } else {
-            echo "<span style='color: blue; font-style: italic;font-size:20px'>{$i}</span>";
-        }
-        echo " ";
-    }
+function sayHello($name) {
+	echo "Hello $name!";
+}
 
-    ?>
+?>
 
-</body>
-
+<html>
+	<head>
+		<title>Visual Studio Code Remote :: PHP</title>
+	</head>
+	<body>
+		<?php 
+		
+		define("PI",3.14);
+		$r=10;
+		$s=PI*pow($r,2);
+		$p=2*PI*$r;
+			echo "$p </br>";
+			echo $s;
+			//ok
+			
+			$n = 100;
+							$arr1 = array($n);
+							$arr2 = array(1,2,3,4);
+							$arr3 = array();
+							$arr4 = array("hoten" => "Trần Linh Nhi",
+										"quequan" => "Ha Nội",
+										"tuoi" => 22			
+							);
+							print_r($n);
+							print_r($arr1);
+							print_r($arr2);
+							print_r($arr3);
+							print_r($arr4);
+		
+		for($i=1;$i<=200;$i++){
+			if($i%2==0)
+				echo "<b><font color=red>".$i."</font></b>";
+		else
+				echo "<i><font color=blue>".$i."</font></i>";
+		}
+		
+		$sTK = $_REQUEST["txtTendangnhap"];
+			if (isset($sTK))
+			{
+				echo "</br>Tài Khoản là:<font color=red>".$sTK."</font>";
+			}
+		
+		$sMK = $_REQUEST["txtMatkhau"];
+			if (isset($sMK))
+			{
+				echo "</br>Mật khẩu là:<font color=red>".$sMK."</font>";
+			}	
+		?>
+		<h1>Đăng nhập hệ thống</h1>
+		<form action="index.php" Method="GET" >
+		Tên đăng nhập : <input type="text" name="txtTendangnhap"/></br>
+		Mật khẩu : <input type="password" name="txtMatkhau"/></br>
+		</br>
+		<input type="submit" value="Đăng Nhập"/>
+		
+		
+		
+			
+	</body>
 </html>
