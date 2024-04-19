@@ -8,9 +8,28 @@
 </head>
 
 <body>
+    <h3>VD1:</h3>
+    <p>Văn bản HTML</p>
     <?php
-
-    for ($i = 1; $i <= 200; $i++) {
+    echo '<p>Văn bản PHP!</p>';
+    ?>
+    <p>Văn bản HTML khác,</p>
+    <h3>VD2:</h3>
+    <?php
+    echo '<P>Khối dữ liệu PHP 1.</p>';
+    ?>
+    <p>Dữ liệu HTML, <?php echo 'Dữ liệu PHP 2';?></p>
+    <?php
+    echo '<b>';
+    ?>
+    Một ví dụ kết hợp HTML và PHP.
+    <?php
+    echo '</b>;'
+    ?>
+    <br>
+    <h3>Bài tập:</h3>
+    <?php
+     for ($i = 1; $i <= 200; $i++) {
         if ($i % 2 == 0) {
             echo "<span style='color: red; font-weight: bold; font-size:20px;'>{$i}</span>";
         } else {
