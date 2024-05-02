@@ -1,0 +1,24 @@
+CREATE TABLE  SinhVien(
+    MSSV VARCHAR(20) PRIMARY KEY,
+    HoTen VARCHAR(50) NOT NULL
+	);
+
+INSERT INTO SinhVien (`MSSV`, `HoTen`) VALUES (20010917,"A"), (20010918,"B"), (20010919,"C");
+ 
+CREATE TABLE  MonHoc(
+    MaMH VARCHAR(20) PRIMARY KEY,
+    TenMH VARCHAR(50) NOT NULL
+);
+INSERT INTO MonHoc (`MaMH`, `TenMH`) VALUES (1,"Lập trình web nâng cao"), (2, "Lập trình web"), (3, "Lập trình web cơ bản");
+CREATE TABLE DangKy(
+    MSSV VARCHAR(20) NOT NULL,
+    MaMH VARCHAR(20) NOT NULL,
+    Ky VARCHAR(10) NOT NULL,
+    PRIMARY KEY(MSSV, MaMH, Ky),
+    FOREIGN KEY(MSSV) REFERENCES SinhVien(MSSV),
+    FOREIGN KEY(MaMH) REFERENCES MonHoc(MaMH)
+);
+INSERT INTO DangKy (`MSSV`, `MaMH`, `Ky`) VALUES
+(20010917, 1, 1),
+(20010918, 2, 2),
+(20010919, 3, 3);
